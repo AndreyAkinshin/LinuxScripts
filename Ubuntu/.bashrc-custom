@@ -23,6 +23,22 @@ extract() {
     echo "'$1' is not a valid file!"
   fi
 }
+up() {
+  local d=""
+  limit=$1
+  for ((i=1 ; i <= limit ; i++))
+    do
+      d=$d/..
+    done
+  d=$(echo $d | sed 's/^\///')
+  if [ -z "$d" ]; then
+    d=..
+  fi
+  cd $d
+}
+dsh() {
+  sed "s/\r$//" $1 | sh -x 2>&1 | tee log.txt | grep -E "^[+].*|$"
+}
 
 # Aliases
 git config --global alias.lg "log --graph --date-order --pretty=format:'%C(bold blue)%h%C(reset) %C(bold green)[%an]%C(reset) %Cgreen%d%Creset %s, %C(yellow)%ad%C(reset)' --date=short"

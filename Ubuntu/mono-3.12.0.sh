@@ -2,7 +2,7 @@
 
 install_mono() {
   # Variables
-  local NAME="mono-3.10.0"
+  local NAME="mono-3.12.0"
 
   # Compiler
   sudo apt-get -y install g++

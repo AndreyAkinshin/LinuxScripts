@@ -15,12 +15,6 @@ install_packages() {
   sudo apt-get -y install git
   sudo apt-get -y install htop
   sudo apt-get -y install mc
-
-  # texlive
-  sudo apt-get -y install texlive-latex-base
-  sudo apt-get -y install texlive-latex-extra
-  sudo apt-get -y install texlive-latex-recommended
-  sudo apt-get -y install texlive-fonts-recommended
 }
 
 set_apt_settings

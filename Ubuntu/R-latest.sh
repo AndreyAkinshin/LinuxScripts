@@ -2,7 +2,7 @@
 
 install_r() {
   # Install
-  sudo add-apt-repository -y ppa:marutter/rrutter # Support R 3.1.1
+  sudo add-apt-repository -y ppa:marutter/rrutter
   sudo apt-get update
   sudo apt-get -y upgrade
   sudo apt-get -y install r-base
