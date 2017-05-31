@@ -39,6 +39,3 @@ up() {
 dsh() {
   sed "s/\r$//" $1 | sh -x 2>&1 | tee log.txt | grep -E "^[+].*|$"
 }
-
-# Aliases
-git config --global alias.lg "log --graph --date-order --pretty=format:'%C(bold blue)%h%C(reset) %C(bold green)[%an]%C(reset) %Cgreen%d%Creset %s, %C(yellow)%ad%C(reset)' --date=short"
